@@ -186,6 +186,7 @@ const extractAbilities = (arr) => {
   let x=arr.map((item,i)=>{
     return arr[i].ability.name;
   });
+  console.log(x);
   return x;
 };
 

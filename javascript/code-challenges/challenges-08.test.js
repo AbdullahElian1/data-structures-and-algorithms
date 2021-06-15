@@ -56,6 +56,8 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+  let Childrensorted= charArray.sort((a,b)=> a.children.length-b.children.length);
+  return Childrensorted;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,15 +128,19 @@ CHALLENGE 6
 
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
-
+['Cleveland', 'San Diego', 'Birmingham', 'Seattle', 'Miami', 'New York City', 'Omaha', 'Portland', 'Austin', 'Boston', 'Newport Beach', 'Hoboken'];
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  let regex1=/[A-J](\w)*/g;
-  let arr1= arr.match(regex1);
-  if(arr === null)
-    return [];
-  else
-    return arr1;
+  // let regex1=/[A-J](\w)*/g;
+  // let arr1= arr.match(regex1);
+  // if(arr === null)
+  //   return [];
+  // else
+  //   return arr1;
+  const pattern = /[A-J]/;
+  const otherArr =[];
+  arr.map(element => (pattern.test(element[0])) ? otherArr.push(element) : '');
+  return otherArr;
 };
 
 /* ------------------------------------------------------------------------------------------------

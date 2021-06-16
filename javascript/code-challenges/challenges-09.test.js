@@ -159,14 +159,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-
-  // arr.forEach(element => { if (element.name === character) { let index = Object.keys(element).indexOf('children'); if(index >= 0){ result = Object.values(element)[index]; } } }); return result.length ? true : false;
-
-
-
-
-
-
+  let child = false;
+  Object.values(arr).forEach(value => {
+    console.log(value);
+    if (value.name === character && value.children) {
+      child = true; }
+  });
+  return child;
 };
 
 

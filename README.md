@@ -22,7 +22,11 @@ To run your tests
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
+### Table Of Content
+
 | assignment      | Description                       |
 | -------------   | --------------------------------- |
 |Array_revers     |[array_revers](python/array_reverse/README.md) |
+|Array_revers     |[insert](python/code_challenges/array-insert-shift/README.md) |
+
 

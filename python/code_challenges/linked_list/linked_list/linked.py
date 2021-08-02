@@ -110,15 +110,16 @@ if __name__ == "__main__":
 #   test.insert(16)
 #   test.insert(29)
 #   test.insert(4)
-#   test.insert(7)
-  test.append(177)
-  test.append(1)
+  test.insert(7)
+#   test.append(177)
+#   test.append(1)
 
-  test.append(17)
+#   test.append(17)
 
   # print("c")
-#   test.insert_before(7,77890)
+  test.insert_before(7,77890)
   # test.insert_before(7777,7)
+#   test.insert_before()
   print(test)
 
 

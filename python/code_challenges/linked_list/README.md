@@ -7,4 +7,13 @@ List is that each Node references the next Node in the link
 
 to do functionality  for linked list like insert to insert new node also find to search in the linked and to print all node in the linked.
 
+# code challeng 6
+
+do three function on for add node to the last of the linked_list
+
+and on to add after specific node and one to add before
+
+![insert](assest/insertAfter.jpg)
+
+
 

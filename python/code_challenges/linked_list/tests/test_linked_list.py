@@ -45,13 +45,20 @@ def test_fined_value_in_linked_list():
 def test_add_to_last_list():
     new_linked= LinkedList()
     new_linked.append(30)
-    assert new_linked.includes(30)
+    new_linked.append(35)
+    actual=new_linked.head.next.value
+    expect=35
+    assert actual==expect
 
 def test_add_many_to_last_list():
     new_linked= LinkedList()
     new_linked.append(30)
     new_linked.append(35)
     new_linked.append(40)
+    new_linked.append(45)
+    actual=new_linked.head.next.next.next.value
+    expect=45
+    assert actual==expect
 
 def test_add_to_middle():
     new_linked= LinkedList()
@@ -60,7 +67,9 @@ def test_add_to_middle():
     new_linked.insert(20)
     new_linked.insert(111)
     new_linked.insert_before(20,30)
-    assert new_linked.includes(30)
+    actual=new_linked.head.next.value
+    expect=30
+    assert actual==expect
 
 def test_add_befor_the_first():
     new_linked= LinkedList()
@@ -69,7 +78,9 @@ def test_add_befor_the_first():
     new_linked.insert(20)
     new_linked.insert(111)
     new_linked.insert_before(111,30)
-    assert new_linked.includes(30)
+    actual=new_linked.head.value
+    expect=30
+    assert actual==expect
 
 def test_add_after_middle():
     new_linked= LinkedList()
@@ -78,16 +89,17 @@ def test_add_after_middle():
     new_linked.insert(20)
     new_linked.insert(111)
     new_linked.insert_after(20,30)
-    assert new_linked.includes(30)
+    actual=new_linked.head.next.next.value
+    expect=30
+    assert actual==expect
 
 def test_add_after_last():
     new_linked= LinkedList()
     new_linked.insert(1)
     new_linked.insert(3)
-    new_linked.insert(20)
-    new_linked.insert(111)
     new_linked.insert_after(1,30)
-    assert new_linked.includes(30)
-
+    actual=new_linked.head.next.next.value
+    expect=30
+    assert actual==expect
 
 

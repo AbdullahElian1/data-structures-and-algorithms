@@ -81,16 +81,23 @@ class LinkedList():
     node.next = temp
 
 
+  def kthFromEnd(self,num):
+      if num <0:
+          return "please input positive number"
 
+      num1=len(self)-1
+      if num1<num:
+          return ("out of range")
 
+      num_of_loop=(len(self)-num)-1
+      current=self.head
 
+      while num_of_loop >0 :
+        #   print(num_of_loop)
+          current=current.next
+          num_of_loop -=1
 
-
-
-
-
-
-
+      return current.value
 
   def __str__(self):
     string = ""
@@ -105,21 +112,37 @@ class LinkedList():
   def __repr__(self):
     return "LinkedList()"
 
+  def __len__(self):
+    counter = 0
+    current = self.head
+
+    while current:
+      counter += 1
+      current = current.next
+
+    return counter
+
+
+
+
+
 if __name__ == "__main__":
   test = LinkedList()
-#   test.insert(16)
-#   test.insert(29)
-#   test.insert(4)
-#   test.insert(7)
+  test.insert(16)
+  test.insert(29)
+  test.insert(4)
+  test.insert(7)
   test.append(177)
   test.append(1)
+print(test)
+print(test.kthFromEnd(-1))
 
-  test.append(17)
+# #   print(test.kthFromEnd(6))
+# #   test.insert_before(7,77890)
+#   # test.insert_before(7777,7)
+# #   print(test)
 
-  # print("c")
-#   test.insert_before(7,77890)
-  # test.insert_before(7777,7)
-  print(test)
+
 
 
 

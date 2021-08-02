@@ -7,4 +7,16 @@ List is that each Node references the next Node in the link
 
 to do functionality  for linked list like insert to insert new node also find to search in the linked and to print all node in the linked.
 
+# code challenge 6 :
+
+
+
+# codechallenge 7
+
+do function to return the value from the end of the linked list example
+
+if the number was 0 will return the last element and if was one will return before the last one
+
+![kth](assest/khmethod.png)
+
 

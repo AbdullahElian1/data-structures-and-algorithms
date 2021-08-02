@@ -20,8 +20,9 @@ def test_node_has_next_property():
   assert True
 
 
-def test_linkedlist():
-   assert LinkedList()
+# def test_linkedlist():
+#    assert LinkedList()
+
 def test_insert():
   ll = LinkedList()
   with pytest.raises(AttributeError):
@@ -102,4 +103,17 @@ def test_add_after_last():
     expect=30
     assert actual==expect
 
+
+def test_out_K_of_Range():
+    new_linked=LinkedList()
+    new_linked.kthFromEnd(0)=="out of range"
+    new_linked.append(1)
+    new_linked.append(2)
+    new_linked.append(3)
+    new_linked.append(4)
+    actual=new_linked.kthFromEnd(5)
+    excpect="out of range"
+    assert new_linked.kthFromEnd(0) == 4
+    assert new_linked.kthFromEnd(1) == 3
+    assert new_linked.kthFromEnd(100) == "out of range"
 

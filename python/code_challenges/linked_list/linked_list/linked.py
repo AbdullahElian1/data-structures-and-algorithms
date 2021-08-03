@@ -1,6 +1,9 @@
 # import linked_list
 
 
+from typing import Counter
+
+
 class Node:
 
   def __init__(self, value=""):
@@ -99,14 +102,16 @@ class LinkedList():
 
       return current.value
 
+
+
   def __str__(self):
     string = ""
     current = self.head
 
     while current:
-      string += f"{str(current.value)} -> "
+      string += f"{current.value} -> "
       current = current.next
-    string += "None"
+    # string += "None"
     return string
 
   def __repr__(self):
@@ -125,24 +130,90 @@ class LinkedList():
 
 
 
+def zip_linked_list(linked1, linked2):
 
-if __name__ == "__main__":
-  test = LinkedList()
 
-#   test.insert(16)
-#   test.insert(29)
-#   test.insert(4)
-  test.insert(7)
-#   test.append(177)
-#   test.append(1)
 
-#   test.append(17)
+        cuurent=linked1.head
+        cuurent1=linked2.head
+        if cuurent==None:
+          if cuurent1==None:
+            raise Exception("empty list")
+        if cuurent==None:
+          if cuurent1!=None:
+            return linked2
+        if cuurent!=None:
+          if cuurent1==None:
+            return linked1
 
-  # print("c")
-  test.insert_before(7,77890)
-  # test.insert_before(7777,7)
-#   test.insert_before()
-  print(test)
+        while cuurent:
+          c=0
+          c+=1
+          print(c)
+          if cuurent1:
+                temp=cuurent.next
+                cuurent.next=cuurent1
+                cuurent=temp
+
+
+
+                if temp:
+                  temp1=cuurent1.next
+                  cuurent1.next=temp
+                  cuurent1=temp1
+
+
+
+
+
+
+
+
+
+        return linked1
+
+# new_linked=LinkedList()
+# new_linked1=LinkedList()
+# new_linked.append(1)
+# new_linked.append(2)
+# new_linked1.append(3)
+# new_linked1.append(4)
+# expected="1 -> 3 -> 2 -> 4  ->"
+# actual=zip_linked_list(new_linked,new_linked1)
+# print(actual)
+# print(expected)
+# if(actual==expected):
+#     print ("teeeeeeeest")
+# else:
+#     print("Rrrrr")
+
+# if __name__ == "__main__":
+
+#   test3=LinkedList()
+
+
+
+#   print(zip_linked_list(test,test1))
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #   while current.next!=None:
+    #       current.next=urrent
+    #       urrent.next=current.next
+    #       urrent=urrent.next
+    #       current=current.next
+
+
 
 
 

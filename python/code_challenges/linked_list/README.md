@@ -30,3 +30,12 @@ if the number was 0 will return the last element and if was one will return befo
 
 
 
+# code challenge 8:
+
+write a function that take two linked list as arguments then return one linked list contain both
+
+![zip_list](assest/connect_two_list.png)
+
+
+
+

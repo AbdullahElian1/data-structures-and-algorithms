@@ -1,6 +1,6 @@
 import pytest
 from linked_list import __version__
-from linked_list.linked import LinkedList, Node
+from linked_list.linked import LinkedList,Node,zip_linked_list
 
 
 def test_version():
@@ -104,4 +104,29 @@ def test_out_K_of_Range():
     assert new_linked.kthFromEnd(0) == 4
     assert new_linked.kthFromEnd(1) == 3
     assert new_linked.kthFromEnd(100) == "out of range"
+
+def test_zip_list():
+    new_linked=LinkedList()
+    new_linked1=LinkedList()
+    with pytest.raises(Exception):
+     actual=zip_linked_list(new_linked,new_linked1)
+     assert actual
+
+# def test_zip_list():
+#     new_linked=LinkedList()
+#     new_linked1=LinkedList()
+#     new_linked.append(1)
+#     new_linked.append(2)
+#     new_linked1.append(3)
+#     new_linked1.append(4)
+#     expected="1 -> 3 -> 2 -> 4  -> None"
+#     actual=zip_linked_list(new_linked,new_linked1)
+#     print(actual)
+    # assert actual==expected
+
+
+
+
+
+
 

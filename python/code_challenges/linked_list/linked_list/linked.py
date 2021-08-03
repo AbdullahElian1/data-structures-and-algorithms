@@ -214,11 +214,6 @@ def zip_linked_list(linked1, linked2):
     #       current=current.next
 
 
-# #   print(test.kthFromEnd(6))
-# #   test.insert_before(7,77890)
-#   # test.insert_before(7777,7)
-# #   print(test)
-
 
 
 

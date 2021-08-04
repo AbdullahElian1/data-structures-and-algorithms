@@ -145,11 +145,17 @@ def zip_linked_list(linked1, linked2):
         if cuurent!=None:
           if cuurent1==None:
             return linked1
+        # if len(linked1)>len(linked2):
+        #     print(linked1)
+        #     cuurent=linked1.head
+        # else:
+        #     print(linked2)
+        #     cuurent=linked2.head
+        #     cuurent1=linked1.head
+        # print(cuurent)
 
         while cuurent:
-          c=0
-          c+=1
-          print(c)
+
           if cuurent1:
                 temp=cuurent.next
                 cuurent.next=cuurent1
@@ -162,6 +168,16 @@ def zip_linked_list(linked1, linked2):
                   cuurent1.next=temp
                   cuurent1=temp1
 
+          if cuurent1==None:
+              break
+
+        #   cuurent=cuurent.next
+        #   if cuurent1:
+        #       cuurent.next=cuurent1
+        #       break
+
+
+
 
 
 
@@ -172,28 +188,18 @@ def zip_linked_list(linked1, linked2):
 
         return linked1
 
-# new_linked=LinkedList()
-# new_linked1=LinkedList()
-# new_linked.append(1)
-# new_linked.append(2)
-# new_linked1.append(3)
-# new_linked1.append(4)
-# expected="1 -> 3 -> 2 -> 4  ->"
-# actual=zip_linked_list(new_linked,new_linked1)
-# print(actual)
-# print(expected)
-# if(actual==expected):
-#     print ("teeeeeeeest")
-# else:
-#     print("Rrrrr")
-
-# if __name__ == "__main__":
-
-#   test3=LinkedList()
+new_linked=LinkedList()
+new_linked1=LinkedList()
+new_linked.append(1)
+new_linked.append(2)
+new_linked.append(5)
+new_linked.append(2)
+new_linked.append(2)
+new_linked1.append(3)
+new_linked1.append(4)
 
 
-
-#   print(zip_linked_list(test,test1))
+print(zip_linked_list(new_linked,new_linked1))
 
 
 

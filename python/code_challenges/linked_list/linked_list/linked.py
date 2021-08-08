@@ -188,21 +188,47 @@ def zip_linked_list(linked1, linked2):
 
         return linked1
 
+
 new_linked=LinkedList()
 new_linked1=LinkedList()
-new_linked.append(1)
-new_linked.append(2)
-new_linked.append(5)
-new_linked.append(2)
-new_linked.append(2)
-new_linked1.append(3)
-new_linked1.append(4)
+new_linked1.append("t")
+new_linked1.append("a")
+new_linked1.append("d")
+new_linked1.append("o")
+new_linked1.append("c")
+new_linked1.append("a")
+new_linked1.append("t")
+
+# new_linked1.append(5)
+# new_linked1.append(6
 
 
-print(zip_linked_list(new_linked,new_linked1))
+# print(zip_linked_list(new_linked,new_linked1))
 
 
 
+def palindrome(linked):
+    current=linked.head
+    value=[]
+
+    while current:
+        value.append(current.value)
+        print(current)
+        current=current.next
+
+    current=linked.head
+    value=value[::-1]
+    print(value)
+    for i in value:
+        if i==current.value:
+            current=current.next
+            if current==None:
+                return True
+        else:
+            return False
+
+
+palindrome(new_linked1)
 
 
 

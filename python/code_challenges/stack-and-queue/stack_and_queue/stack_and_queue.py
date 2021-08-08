@@ -77,14 +77,62 @@ class Queue:
             self.dequeue()
         return counter
 
-test=Queue()
-# test.enqueue(3)
+class pseudo_queue:
+    def __init__(self):
+
+        self.first_stack=Stack()
+        self.second_stack=Stack()
+
+    def enqueue(self,value):
+        self.first_stack.push(value)
+
+
+    def dequeue(self):
+         if self.second_stack.is_empty():
+            while self.first_stack.top != None:
+                self.second_stack.push(self.first_stack.pop())
+         return self.second_stack.pop()
+
+    def __str__(self):
+        string = ""
+        current = self.first_stack.top
+        current1=self.second_stack.top
+        if current:
+          return str( current.value)
+        elif current1:
+            return str(current1.value)
+        else:
+            return ("empty stack")
+
+
+
+        # while current:
+
+        #     string += f"{self.first_stack.top.value} -> "
+        #     current = self.first_stack.pop()
+        #     # string += "None"
+
+
+
+test=pseudo_queue()
+test.enqueue(5)
+test.enqueue(10)
+test.enqueue(15)
+test.enqueue(20)
+# test.enqueue(10)
+
+test.dequeue()
+test.dequeue()
+test.dequeue()
+test.dequeue()
+
+print(test)
 # test.push(2)
 # test.push(1)
 # test.e()
 # test.dequeue()
 
-print(test.__len__())
+# print(test.__len__())
 # test=Stack()
 # test.push(1)
 # test.push(2)

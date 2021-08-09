@@ -112,22 +112,36 @@ class pseudo_queue:
         #     current = self.first_stack.pop()
         #     # string += "None"
 
+class Animal():
+    def __init__(self,type):
+        self.type=type
 
 
-test=pseudo_queue()
-test.enqueue(5)
-test.enqueue(10)
-test.enqueue(15)
-test.enqueue(20)
+class AnimalShelter(Animal):
+    def __init__(self):
+        self.front=None
+        self.rare=None
+
+
+
+
+test=AnimalShelter("Dog")
+print(test.type)
+
+# test=pseudo_queue()
+# test.enqueue(5)
 # test.enqueue(10)
+# test.enqueue(15)
+# test.enqueue(20)
+# # test.enqueue(10)
 
-test.dequeue()
-test.dequeue()
-test.dequeue()
-test.dequeue()
+# test.dequeue()
+# test.dequeue()
+# test.dequeue()
+# test.dequeue()
 
-print(test)
-# test.push(2)
+# print(test)
+# # test.push(2)
 # test.push(1)
 # test.e()
 # test.dequeue()

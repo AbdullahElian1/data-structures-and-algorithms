@@ -31,6 +31,8 @@ To run your tests
 |Array_binary     |[binary_search](python/code_challenges/array-binary-searc/README.md) |
 |psedu_queueue    |[queue](python/code_challenges/stack-and-queue/README.md) |
 |animal_shelter   |[animal_shelter](python/code_challenges/stack-and-queue/README.md) |
+|Bracket          |[Bracket](python/code_challenges/stack-and-queue/README.md) |
+
 
 
 

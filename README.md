@@ -30,7 +30,7 @@ To run your tests
 |Array_insert     |[insert](python/code_challenges/array-insert-shift/README.md) |
 |Array_binary     |[binary_search](python/code_challenges/array-binary-searc/README.md) |
 |psedu_queueue    |[queue](python/code_challenges/stack-and-queue/README.md) |
-|animal_shelter   |[queue](python/code_challenges/stack-and-queue/README.md) |
+|animal_shelter   |[animal_shelter](python/code_challenges/stack-and-queue/README.md) |
 
 
 

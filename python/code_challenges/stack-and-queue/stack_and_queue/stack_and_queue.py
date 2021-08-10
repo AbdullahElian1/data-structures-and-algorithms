@@ -191,7 +191,7 @@ def validate_brackets(string):
     else:
         return False
 
-print(validate_brackets("()"))
+# print(validate_brackets("()"))
 # test=Dog("haski","dog")
 # test2=Dog("s","dog")
 # # test3=Dog("s","dog")

@@ -1,6 +1,6 @@
 import pytest
 from stack_and_queue import __version__
-from stack_and_queue.stack_and_queue import Stack,Queue,Node,pseudo_queue
+from stack_and_queue.stack_and_queue import Stack,Queue,Node,pseudo_queue,Dog,Cat,AnimalShelter
 
 
 def test_version():
@@ -141,3 +141,41 @@ def test_pseudoqueue_dequeue():
     assert test.dequeue() == 15
     assert test.dequeue() == 20
     assert test.dequeue() == 5
+
+def test_get_first_dog():
+    test=Dog("ff","dog")
+    test1=AnimalShelter()
+    test1.enqueue(test)
+    excected="ff"
+    actual=test1.dequeue("dog")
+    assert excected==actual
+
+def test_get_second_cat():
+    test=Cat("fofo","cat")
+    test2=Cat("shsho","cat")
+    test1=AnimalShelter()
+    test1.enqueue(test)
+    test1.enqueue(test2)
+
+    excected="shsho"
+    actual=test1.dequeue("cat")
+    actual=test1.dequeue("cat")
+
+    assert excected==actual
+
+def test_get_second_dog():
+    test=Dog("ff","dog")
+    test2=Dog("gg","dog")
+
+    test1=AnimalShelter()
+    test1.enqueue(test)
+    test1.enqueue(test2)
+
+    excected="gg"
+    actual=test1.dequeue("dog")
+    actual=test1.dequeue("dog")
+
+    assert excected==actual
+
+
+

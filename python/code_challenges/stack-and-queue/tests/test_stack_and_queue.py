@@ -1,6 +1,6 @@
 import pytest
 from stack_and_queue import __version__
-from stack_and_queue.stack_and_queue import Stack,Queue,Node,pseudo_queue,Dog,Cat,AnimalShelter
+from stack_and_queue.stack_and_queue import Stack,Queue,Node,pseudo_queue,Dog,Cat,AnimalShelter,validate_brackets
 
 
 def test_version():
@@ -176,6 +176,38 @@ def test_get_second_dog():
     actual=test1.dequeue("dog")
 
     assert excected==actual
+
+def test_validate_one_open_bracket():
+    test="("
+    expected=False
+    actual=validate_brackets(test)
+    assert expected==actual
+
+def test_validate_one_close_bracket():
+    test=")"
+    expected=False
+    actual=validate_brackets(test)
+    assert expected==actual
+
+def test_validate_one_open_And_one_close_bracket():
+    test="()"
+    expected=True
+    actual=validate_brackets(test)
+    assert expected==actual
+
+def test_validate_multiple_brackets():
+    test="[(){}[]]"
+    expected=True
+    actual=validate_brackets(test)
+    assert expected==actual
+
+def test_validate_multiple_brackets_with_String():
+    test="hjk[(hkj){hkj}[hjk]hjbk]"
+    expected=True
+    actual=validate_brackets(test)
+    assert expected==actual
+
+
 
 
 

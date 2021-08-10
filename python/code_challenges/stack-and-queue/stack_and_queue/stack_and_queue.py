@@ -107,7 +107,6 @@ class pseudo_queue:
             return ("empty stack")
 
 
-
         # while current:
 
         #     string += f"{self.first_stack.top.value} -> "
@@ -170,7 +169,29 @@ class AnimalShelter:
 
 
         return string
+# https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-python/
+def validate_brackets(string):
+    open_list = ["[","{","("]
+    close_list = ["]","}",")"]
+    stack = []
+    for i in string:
+        if i in open_list:
+            stack.append(i)
+        elif i in close_list:
+            pos = close_list.index(i)
+            if ((len(stack) > 0) and
+                (open_list[pos] == stack[len(stack)-1])):
+                print(open_list[pos] )
+                print(stack[len(stack)-1])
+                stack.pop()
+            else:
+                return False
+    if len(stack) == 0:
+        return True
+    else:
+        return False
 
+print(validate_brackets("()"))
 # test=Dog("haski","dog")
 # test2=Dog("s","dog")
 # # test3=Dog("s","dog")

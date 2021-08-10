@@ -53,8 +53,10 @@ class Queue:
         if self.is_empty():
             raise Exception("empty equeue")
         if self.front==self.rear:
+            temp=self.front
             self.front=None
             self.rear=None
+            return temp.value
         else:
             temp=self.front
             self.front=self.front.next
@@ -112,21 +114,85 @@ class pseudo_queue:
         #     current = self.first_stack.pop()
         #     # string += "None"
 
-class Animal():
-    def __init__(self,type):
+class Animal:
+    def __init__(self,name,type):
+        self.name=name
         self.type=type
 
 
-class AnimalShelter(Animal):
-    def __init__(self):
-        self.front=None
-        self.rare=None
+class Dog(Animal):
+    pass
+
+class Cat(Animal):
+    pass
+
+class AnimalShelter:
+    def __init__(self) :
+        self.dog=Queue()
+        self.cat=Queue()
+
+    def enqueue(self,animal_type):
+
+        if animal_type.type=="dog":
+            # print(animal_type.name)
+            self.dog.enqueue(animal_type)
+        elif animal_type.type=="cat":
+            # print(animal_type.name)
+            self.cat.enqueue(animal_type)
+        else:
+            print("animal should be cat or dog")
+
+    def dequeue(self,pref):
+        if pref=="dog":
+            name=self.dog.dequeue().name
+            return name
+        elif pref=="cat":
+            name=self.cat.dequeue().name
+            return name
+        else:
+            print("pref should be cat or dog")
+    def __str__(self):
+        string=""
+        cuurrent=self.dog.front
+        cuurrent1=self.cat.front
+
+        while cuurrent:
+         string+="Dog Queue"
+         string+= f"{cuurrent.value.name} -> "
+         cuurrent=cuurrent.next
+        string+="None -> Cat Queue ->"
+
+        while cuurrent1:
+         string+= f"{cuurrent1.value.name} -> "
+         cuurrent1=cuurrent1.next
+        string+="None"
 
 
 
+        return string
 
-test=AnimalShelter("Dog")
-print(test.type)
+# test=Dog("haski","dog")
+# test2=Dog("s","dog")
+# # test3=Dog("s","dog")
+# test4=Cat("sherazi","cat")
+# test5=Cat("test","cat")
+
+# test1=AnimalShelter()
+# test1.enqueue(test)
+# test1.enqueue(test2)
+# # # test1.enqueue(test)
+# test1.enqueue(test4)
+# test1.enqueue(test5)
+# print(test1)
+#
+# print(test1.dequeue("dog"))
+# print(test1.dequeue("dog"))
+
+# print(test1.dequeue("cat"))
+# test=Do
+
+# print(test1.dequeue("dog"))
+
 
 # test=pseudo_queue()
 # test.enqueue(5)

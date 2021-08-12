@@ -60,4 +60,36 @@ def test_post_order(data):
     expected=["D", "E", "B", "F", "C", "A"]
     assert actual==expected
 
+def test_add_method():
+    x = BinarySearch()
+    x.add(7)
+    x.add(8)
+    x.add(6)
+    x.add(5)
+    x.add(150)
+    x.add(19)
+    x.add(111)
+    x.add(115)
+    x.add(10000)
+    actual = x.in_order(x.root)
+    expected = [5, 6, 7, 8, 19, 111, 115, 150, 10000]
+    assert actual == expected
+
+
+def test_Contains_method():
+    x = BinarySearch()
+    x.add(7)
+    x.add(8)
+    x.add(6)
+    x.add(5)
+    x.add(150)
+    x.add(19)
+    x.add(111)
+    x.add(115)
+    x.add(10000)
+
+    assert x.Contains(4) == False
+    assert x.Contains(5) == True
+    assert x.Contains(6) == True
+    assert x.Contains(3) == False
 

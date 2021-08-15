@@ -17,6 +17,23 @@ def data():
     root.right.left=Node("F")
     return root
 
+def test_get_max():
+
+    x=Node(5)
+    x.left=Node(68)
+    x.right=Node(78)
+    x.left.left=Node(8)
+    x.right.right=Node(9)
+    y=BinaryTree()
+    y.root=x
+    actual=y.tree_max()
+    expected=78
+    assert actual==expected
+
+
+
+
+
 def test_empty_binary_tree():
     assert BinaryTree()
 

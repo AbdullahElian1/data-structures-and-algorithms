@@ -1,6 +1,3 @@
-from typing import Counter
-
-
 class Node:
     def __init__(self,value):
         self.value=value
@@ -11,6 +8,8 @@ class BinaryTree:
     def __init__(self) :
         self.root=None
         self.arr=[]
+
+
 
     def pre_order(self,root):
         # print(root.value)
@@ -54,6 +53,37 @@ class BinaryTree:
 
     def test (self):
         self.arr=[]
+    def tree_max(self):
+
+        arr_of_number=self.in_order(self.root)
+        # return(x)
+        self.max=0
+
+        for i in arr_of_number :
+            if i>self.max:
+                self.max=i
+        return self.max
+
+        # print(self.temp.value)
+        # if self.temp.left:
+        #     self.temp=self.temp.left
+        #     self.tree_max()
+
+        #     # return self.max
+        # print(self.temp.value)
+        # if self.max<self.temp.value:
+        #     self.max=self.temp.value
+
+        # if self.temp.right:
+        #      self.temp=self.temp.right
+        #      self.tree_max()
+
+        # return self.max
+
+
+
+
+
 
 
 class BinarySearch(BinaryTree):
@@ -117,31 +147,44 @@ class BinarySearch(BinaryTree):
 
 
 
+# a=['A', 'B', 'C', 'D', 'E', 'F']
+# b=['A', 'B', 'C', 'D', 'E', 'F']
+# if a==b:
+#     print("yeeeeees")
 
 
-x=BinarySearch()
+
+x=BinaryTree()
 # x.push(10)
-# root=Node(1)
+# root=Node(10)
 # root.left=Node(2)
 # root.left.left=Node(3)
 # root.left.right=Node(4)
 # root.right=Node(5)
 # root.right.left=Node(6)
 # x.root=root
-x.add(7)
-x.add(8)
-x.add(6)
-x.add(5)
-x.add(150)
-x.add(19)
-x.add(111)
-x.add(115)
-x.add(10000)
-print(x.Contains(10000))
+root=Node("A")
+root.left=Node("B")
+root.left.left=Node("D")
+root.left.right=Node("E")
+root.right=Node("C")
+root.right.left=Node("F")
+print(x.BreadthFirst(root))
+# x.temp=root
+# x.add(7)
+# x.add(8)
+# x.add(6)
+# x.add(5)
+# x.add(150)
+# x.add(19)
+# x.add(111)
+# x.add(115)
+# x.add(10000)
+# print(x.tree_max())
 
 
-result=x.in_order(x.root)
-print(result)
+# result=x.in_order(x.root)
+# print(result)
 # result=x.post_order(1)
 # x.test()
 # result=x.pre_order(root)

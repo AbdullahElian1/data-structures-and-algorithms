@@ -1,3 +1,6 @@
+from typing import Counter
+
+
 class Node():
     def __init__(self,value=""):
         self.next=None
@@ -13,6 +16,7 @@ class Stack():
         self.top=node
 
     def pop(self):
+
         if self.is_empty():
             raise Exception("empty stack")
         temp=self.top
@@ -34,6 +38,10 @@ class Stack():
             counter +=1
             self.pop()
         return counter
+
+
+
+
 
 
 
@@ -169,6 +177,7 @@ class AnimalShelter:
 
 
         return string
+
 # https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-python/
 def validate_brackets(string):
     open_list = ["[","{","("]
@@ -240,3 +249,30 @@ def validate_brackets(string):
 
 
 # print(test.peek())
+
+def x(list,k):
+
+    y=Queue()
+    for i in list:
+        y.enqueue(i)
+    # print(y.peek())
+
+    Current=y
+    print(Current.front)
+    while Current.front:
+        for i in range(k):
+           c=Current.peek()
+           print(c)
+        #    if k-1==i:
+        #        Current.dequeue()
+        #        continue
+        #    print(c)
+        #    Current.dequeue()
+        #    Current.enqueue(c)
+        Current=Current.next
+
+
+
+
+r=["a","b","c","d"]
+x(r,3)

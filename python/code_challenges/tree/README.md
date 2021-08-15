@@ -24,3 +24,10 @@ for today's approach, i used only one method to complete today's code challenge,
 
 we have three classes, Tree, Node and Binary_Search_Tree.
 
+
+
+# White bored
+
+
+![max_tree](assest/max_tree.jpg)
+

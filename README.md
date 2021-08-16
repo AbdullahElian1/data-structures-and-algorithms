@@ -32,6 +32,8 @@ To run your tests
 |psedu_queueue    |[queue](python/code_challenges/stack-and-queue/README.md) |
 |animal_shelter   |[animal_shelter](python/code_challenges/stack-and-queue/README.md) |
 |Bracket          |[Bracket](python/code_challenges/stack-and-queue/README.md) |
+|Tree             |[Tree](python/code_challenges/tree/README.md) |
+
 
 
 

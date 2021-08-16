@@ -1,3 +1,47 @@
+# from tree.queue import Queue
+class Queue:
+    def __init__(self):
+        self.front=None
+        self.rear=None
+    def enqueue(self,value):
+        node=Node(value)
+        if self.is_empty():
+            self.front=node
+            self.rear=node
+        self.rear.next=node
+        self.rear=node
+    def dequeue(self):
+        if self.is_empty():
+            raise Exception("empty equeue")
+        if self.front==self.rear:
+            temp=self.front
+            self.front=None
+            self.rear=None
+            return temp.value
+        else:
+            temp=self.front
+            self.front=self.front.next
+            temp.next=None
+            return temp.value
+
+    def peek(self):
+       if self.is_empty():
+           raise Exception("empty equeue")
+       return self.front.value
+
+
+    def is_empty(self):
+     return not self.front
+
+    def __len__(self):
+        counter=0
+        while self.front:
+            counter +=1
+            self.dequeue()
+        return counter
+
+
+
 class Node:
     def __init__(self,value):
         self.value=value
@@ -57,7 +101,7 @@ class BinaryTree:
 
         arr_of_number=self.in_order(self.root)
         # return(x)
-        self.max=0
+        self.max=self.root.value
 
         for i in arr_of_number :
             if i>self.max:
@@ -79,7 +123,25 @@ class BinaryTree:
         #      self.tree_max()
 
         # return self.max
+    def BreadthFirst(self,root):
 
+            if not root:
+                raise Exception("Empty Tree")
+
+            Queue_breadth = Queue()
+            Queue_breadth.enqueue(root)
+            try:
+                while Queue_breadth.peek():
+                        node_front = Queue_breadth.dequeue()
+                        self.arr.append(node_front.value)
+
+                        if node_front.left:
+                            Queue_breadth.enqueue(node_front.left)
+
+                        if node_front.right:
+                            Queue_breadth.enqueue(node_front.right)
+            except :
+                    return self.arr
 
 
 

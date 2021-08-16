@@ -30,4 +30,8 @@ we have three classes, Tree, Node and Binary_Search_Tree.
 
 
 ![max_tree](assest/max_tree.jpg)
+# Breadth Tree
+![breadth-first](assest/breadthtree.jpg)
+
+
 

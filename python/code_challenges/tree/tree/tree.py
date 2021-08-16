@@ -1,3 +1,47 @@
+# from tree.queue import Queue
+class Queue:
+    def __init__(self):
+        self.front=None
+        self.rear=None
+    def enqueue(self,value):
+        node=Node(value)
+        if self.is_empty():
+            self.front=node
+            self.rear=node
+        self.rear.next=node
+        self.rear=node
+    def dequeue(self):
+        if self.is_empty():
+            raise Exception("empty equeue")
+        if self.front==self.rear:
+            temp=self.front
+            self.front=None
+            self.rear=None
+            return temp.value
+        else:
+            temp=self.front
+            self.front=self.front.next
+            temp.next=None
+            return temp.value
+
+    def peek(self):
+       if self.is_empty():
+           raise Exception("empty equeue")
+       return self.front.value
+
+
+    def is_empty(self):
+     return not self.front
+
+    def __len__(self):
+        counter=0
+        while self.front:
+            counter +=1
+            self.dequeue()
+        return counter
+
+
+
 class Node:
     def __init__(self,value):
         self.value=value
@@ -57,7 +101,7 @@ class BinaryTree:
 
         arr_of_number=self.in_order(self.root)
         # return(x)
-        self.max=0
+        self.max=self.root.value
 
         for i in arr_of_number :
             if i>self.max:
@@ -155,21 +199,20 @@ class BinarySearch(BinaryTree):
 
 
 x=BinaryTree()
-# x.push(10)
-# root=Node(10)
-# root.left=Node(2)
-# root.left.left=Node(3)
-# root.left.right=Node(4)
-# root.right=Node(5)
-# root.right.left=Node(6)
-# x.root=root
-root=Node("A")
-root.left=Node("B")
-root.left.left=Node("D")
-root.left.right=Node("E")
-root.right=Node("C")
-root.right.left=Node("F")
-print(x.BreadthFirst(root))
+root=Node(10)
+root.left=Node(2)
+root.left.left=Node(3)
+root.left.right=Node(4)
+root.right=Node(5)
+root.right.left=Node(6)
+x.root=root
+# root=Node("A")
+# root.left=Node("B")
+# root.left.left=Node("D")
+# root.left.right=Node("E")
+# root.right=Node("C")
+# root.right.left=Node("F")
+print(x.tree_max())
 # x.temp=root
 # x.add(7)
 # x.add(8)

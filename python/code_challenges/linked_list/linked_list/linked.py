@@ -189,15 +189,58 @@ def zip_linked_list(linked1, linked2):
         return linked1
 
 
-new_linked=LinkedList()
+def reverse(linked):
+    curr = linked.head
+    prev=None
+
+
+    # consider two nodes at a time and swap their links
+    while curr and curr.next:
+
+        temp = curr.next
+        curr.next = temp.next
+        temp.next = curr
+
+        if prev is None:
+            head = temp
+        else:
+            prev.next = temp
+
+        prev = curr
+        curr = curr.next
+
+    return head.next.next
+  # Current=linked.head
+  # new_head=linked.next
+  # temp=Current.next.next
+  # Current.next.next=Current
+  # Current.next=temp
+  # while temp.next and temp.next.next:
+  #   Current.next=temp.next
+  #   Current=Current.next
+  #   Current.next=temp
+  #   temp=temp.next
+  #   # Current=Current.next
+
+  # return new_head
+
+
+
+
+
+
+
+# new_linked=LinkedList()
 new_linked1=LinkedList()
-new_linked1.append("t")
+# new_linked1.append("t")
+new_linked1.append(1)
+new_linked1.append(2)
+new_linked1.append(3)
+new_linked1.append(4)
 new_linked1.append("a")
-new_linked1.append("d")
-new_linked1.append("o")
-new_linked1.append("c")
-new_linked1.append("a")
-new_linked1.append("t")
+# new_linked1.append("t")
+
+print(reverse(new_linked1))
 
 # new_linked1.append(5)
 # new_linked1.append(6
@@ -228,7 +271,7 @@ def palindrome(linked):
             return False
 
 
-palindrome(new_linked1)
+# palindrome(new_linked1)
 
 
 

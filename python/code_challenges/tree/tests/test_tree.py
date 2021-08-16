@@ -30,7 +30,18 @@ def test_get_max():
     expected=78
     assert actual==expected
 
+def test_breadthFirst(data):
+    test=BinaryTree()
+    actual=test.BreadthFirst(data)
+    expected=['A', 'B', 'C', 'D', 'E', 'F']
+    assert actual==expected
 
+def test_empty_breadthfirst():
+    root=""
+    test=BinaryTree()
+    with pytest.raises(Exception,match="Empty Tree"):
+     actual=test.BreadthFirst(root)
+     assert actual
 
 
 

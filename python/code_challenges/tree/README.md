@@ -35,5 +35,8 @@ we have three classes, Tree, Node and Binary_Search_Tree.
 # Breadth Tree
 ![breadth-first](assest/breadthtree.jpg)
 
+# tree_fizz_buzz
+![fizz_buzz_tree](assest/fizz.png)
+
 
 

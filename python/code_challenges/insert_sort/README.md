@@ -9,16 +9,15 @@
 ![Image of Yaktocat](./blog/0.jpg)
 
 ## Approach & Efficiency
-+ Ceate function take array of numbers as arg
++ Define function take list.
 + for loop in range (1,len(arr))
 + while loop let j = i-1 and temp = arr[i]
 + decleare another loop while j more than or equal zero and temp less than arr[j]
 + if true arr[j+1]=arr[j] and j=j-1
 + after while loop breake let arr[j+1]=temp
-+ after for loop breake return the array
++ after for loop breake return the list
 ## Solution
 ~~~
-
 def InsertionSort(arr):
 
   for i in range(1,len(arr)):

@@ -29,35 +29,36 @@ Sample Array: [8,4,23,42,16,15]
 ### Pass 1:
 when i=1
 
-![1](./blog/1.png)
+![first](./blog/1.png)
 
 ### Pass 2:
 when i=2
 
-![2](./blog/2.png)
+![second](./blog/2.png)
 
 ### Pass 3:
 when i=3
 
-![3](./blog/3.png)
+![third](./blog/3.png)
 
 
 
 ### Pass 4:
 when i=4
 
-![4](./blog/4.png)
+![fourth](./blog/4.png)
 
 ### Pass 5:
 when i=5
 
 
-![4](./blog/5.png)
+![fifth](./blog/5.png)
 
 
 
 ## Efficency
 
-Time: O(n^2)
-Space: O(1)
+### Time: O(n^2)
+
+### Space: O(1)
 

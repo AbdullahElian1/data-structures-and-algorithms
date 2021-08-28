@@ -1,18 +1,19 @@
 # import pytest
 from insert_sort import __version__
-from insert_sort.insert import *
+from insert_sort.merge import *
 
 
 def test_version():
     assert __version__ == '0.1.0'
 
+def test_check_sortion():
 
-def test_check_insertionsort():
+    arr=[8,4,23,42,16,15]
+    mergesort(arr)
 
-    arr=[7,8,9,0,4,2]
-    actual=insertionSort(arr)
-    expected=[0, 2, 4, 7, 8, 9]
+    actual=arr
+    expected=[4, 8, 15, 16, 23, 42]
 
-    assert expected==actual
+    assert  actual==expected
 
 

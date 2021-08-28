@@ -7,7 +7,7 @@
 Create function take an array as argument than sort it in Merge Sort.
 
 ## Whiteboard Process
-![mergesortion](blog/0.jpg)
+![merge_sortion](blog/0.jpg)
 
 
 ## Approach & Efficiency

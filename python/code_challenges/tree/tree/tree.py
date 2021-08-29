@@ -175,6 +175,17 @@ class BinarySearch(BinaryTree):
                         else:
                             current.left=Node(value)
                             return
+
+    def tree_sum_odd(self):
+
+        arr_of_number=self.in_order(self.root)
+        self.sum_odd_number=0
+
+        for i in arr_of_number :
+            if i % 2 != 0:
+                self.sum_odd_number+=i
+        return self.sum_odd_number
+
     def Contains(self,value):
 
              if not self.root:
@@ -216,21 +227,54 @@ class BinarySearch(BinaryTree):
 
 
 
-x=BinaryTree()
-root=Node(10)
-root.left=Node(2)
-root.left.left=Node(3)
-root.left.right=Node(4)
-root.right=Node(5)
-root.right.left=Node(6)
-x.root=root
+tree1=BinaryTree()
+root=Node("FOLDER")
+root.left=Node("FOLDER")
+root.left.left=Node(".JS")
+root.left.right=Node("FOLDER")
+root.right=Node("JS")
+root.right.left=Node("css")
+tree1.root=root
+
+tree2=BinaryTree()
+root=Node("FOLDER")
+root.left=Node("FOLDER")
+root.left.left=Node(".JS")
+root.left.right=Node("FOLDER")
+root.right=Node("JS")
+root.right.left=Node("css")
+root.right.left.left=Node("css")
+
+tree2.root=root
+print(tree1)
+
+def structur(tree1,tree2):
+    x=tree1.in_order(tree1.root)
+    y=tree2.in_order(tree2.root)
+    tree1_sum=0
+    tree2_sum=0
+    print(x)
+    print(y)
+    for i in x:
+        if i!="FOLDER":
+            tree1_sum+=1
+
+    for i in y:
+        if i!="FOLDER":
+            tree2_sum+=1
+
+    if tree1_sum==tree2_sum:
+        return True
+    else:
+        return False
+print(structur(tree1,tree2))
 # root=Node("A")
 # root.left=Node("B")
 # root.left.left=Node("D")
 # root.left.right=Node("E")
 # root.right=Node("C")
 # root.right.left=Node("F")
-print(x.tree_max())
+# print(x.in_order(root))
 # x.temp=root
 # x.add(7)
 # x.add(8)

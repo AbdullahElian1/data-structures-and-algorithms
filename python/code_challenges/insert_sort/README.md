@@ -13,6 +13,7 @@ Create function take an array as argument than sort it in Merge Sort.
 ## Approach & Efficiency
 
 
+
 + Define function take list.
 + Declare n equal the length of list
 + Let mid half of n
@@ -24,6 +25,17 @@ Create function take an array as argument than sort it in Merge Sort.
 
 
 
+## Solution
+~~~
+
+=======
++ Define function take list.
++ for loop in range (1,len(arr))
++ while loop let j = i-1 and temp = arr[i]
++ decleare another loop while j more than or equal zero and temp less than arr[j]
++ if true arr[j+1]=arr[j] and j=j-1
++ after while loop breake let arr[j+1]=temp
++ after for loop breake return the list
 ## Solution
 ~~~
 

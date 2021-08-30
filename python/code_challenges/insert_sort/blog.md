@@ -1,53 +1,68 @@
-# Mergesort
-### merge sort (also commonly spelled as mergesort) is an efficient, general-purpose, and comparison-based sorting algorithm.
-### Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output.
+# Merge Sort
+
+## Auther:Abdullah ELian
+## contributor :Anas Abu Ghalia
+# Challenge Summary
+
+Create function take an array as argument than sort it in Merge Sort.
+
+## Whiteboard Process
+![merge_sortion](blog/0.jpg)
 
 
-```
-ALGORITHM Mergesort(arr)
-    DECLARE n <-- arr.length
-
-    if n > 1
-      DECLARE mid <-- n/2
-      DECLARE left <-- arr[0...mid]
-      DECLARE right <-- arr[mid...n]
-      // sort the left side
-      Mergesort(left)
-      // sort the right side
-      Mergesort(right)
-      // merge the sorted left and right sides together
-      Merge(left, right, arr)
-
-ALGORITHM Merge(left, right, arr)
-    DECLARE i <-- 0
-    DECLARE j <-- 0
-    DECLARE k <-- 0
-
-    while i < left.length && j < right.length
-        if left[i] <= right[j]
-            arr[k] <-- left[i]
-            i <-- i + 1
-        else
-            arr[k] <-- right[j]
-            j <-- j + 1
-
-        k <-- k + 1
-
-    if i = left.length
-       set remaining entries in arr to remaining values in right
-    else
-       set remaining entries in arr to remaining values in left
+## Approach & Efficiency
 
 
-```
++ Define function take list.
++ Declare n equal the length of list
++ Let mid half of n
++ Let left the first half and right the rest.
++ Call the function again with left and right
++ Create new function called merge take three argument left, right and the original list
++ Call merge with the left, right and list
 
-## Trace
 
 
-![Mearge_Sort](blog/1.jpg)
+
+## Solution
+~~~
 
 
-## big O
-### Time: O(nlog(n))
+def  mergesort(arr):
+    n=len(arr)
 
-### Space: O(n)
+    if n > 1:
+       mid =int(n/2)
+       left =arr[0:mid]
+       right =arr[mid:n]
+    #    sort the left side
+       mergesort(left)
+    #    sort the right side
+       mergesort(right)
+    #    merge the sorted left and right sides together
+       merge(left, right, arr)
+
+
+
+def merge(left, right, arr):
+     i =0
+     j =0
+     k =0
+
+     while i < len(left) and j < len(right):
+         if left[i] <= right[j]:
+            arr[k] =left[i]
+            i =i + 1
+         else:
+            arr[k] =right[j]
+            j =j + 1
+
+         k =k + 1
+
+     if i == len(left):
+            arr[k]=right[j]
+     else:
+            arr[k]=left[i]
+
+
+~~~

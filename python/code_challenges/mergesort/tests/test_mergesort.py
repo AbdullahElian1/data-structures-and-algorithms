@@ -1,10 +1,13 @@
-# import pytest
-from insert_sort import __version__
-from insert_sort.merge import *
+from mergesort.merg import *
+from mergesort import __version__
 
 
 def test_version():
     assert __version__ == '0.1.0'
+
+
+
+
 
 def test_check_sortion():
 
@@ -15,5 +18,3 @@ def test_check_sortion():
     expected=[4, 8, 15, 16, 23, 42]
 
     assert  actual==expected
-
-

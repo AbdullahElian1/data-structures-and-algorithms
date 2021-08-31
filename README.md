@@ -35,6 +35,7 @@ To run your tests
 |Tree             |[Tree](python/code_challenges/tree/README.md) |
 |insertion_sort   |[insertion_sort](python/code_challenges/insert_sort/README.md) |
 |mergesort   |[merge_sort](python/code_challenges/mergesort3/README.md) |
+|quick_sort       |[quick_sort](python/code_challenges/quicksort/README.md) |
 
 
 

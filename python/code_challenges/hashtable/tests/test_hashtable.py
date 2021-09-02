@@ -17,3 +17,8 @@ def test_hashtable():
     return test
 
 
+def test_add():
+  test=HashTable()
+  test.add('ahmad',555)
+  assert test.contains('ahmad')==True
+

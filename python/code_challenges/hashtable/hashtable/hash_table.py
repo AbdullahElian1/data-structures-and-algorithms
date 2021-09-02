@@ -60,4 +60,17 @@ class HashTable:
         else:
             return False
 
-    #
+    # return self._buckets[index].includes([key,value])
+
+
+test=HashTable(3)
+
+test.add("anas",4444)
+test.add("roaa",5555)
+test.add("anas",6666)
+
+test.find("anas")
+test.find("roaa")
+
+print(test.hash("abdullah"))
+print(test.hash("abd"))

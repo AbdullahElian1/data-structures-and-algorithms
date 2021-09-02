@@ -22,3 +22,7 @@ def test_add():
   test.add('ahmad',555)
   assert test.contains('ahmad')==True
 
+def test_hash():
+  test=HashTable()
+  assert  test.hash("abdullah")==683
+

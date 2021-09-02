@@ -41,7 +41,17 @@ def test_contains(test_hashtable):
     assert test.contains("anas")
     assert test.contains("roaa")
 
+def test_collision():
+    test=HashTable(3)
+    test.add("abdullah",4444)
+    test.add("abd",5555)
+    assert test.find("abd")==5555
 
+def test_collision2(test_hashtable):
+    test=test_hashtable
+    test.add("40",4444)
+    test.add("31",5555)
+    assert test.find("31")==5555
 
 
 

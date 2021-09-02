@@ -48,3 +48,16 @@ class HashTable:
 
 
 
+    def contains(self,key):
+        """this function will check if the there is a value for the key
+        parameters:
+        key: a string
+        return: a boolean
+        """
+        index=self.hash(key)
+        if self._buckets[index]:
+         return self._buckets[index].includes(key)
+        else:
+            return False
+
+    #

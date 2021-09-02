@@ -9,6 +9,13 @@ class HashTable:
 
 
     def hash(self,key:str)->int:
+        """
+        This function take an string and return index that represent where should the value be in the array
+
+        Arg:string
+
+        return: number that represent index
+        """
         value=0
         for x in key:
             value += ord(x)
@@ -17,6 +24,13 @@ class HashTable:
 
 
     def add(self,key,value):
+        '''add a value to the hashtable by its key
+            parameters:
+                key: a string
+                value: any type
+            Arrgument: key and value
+            return: nothing
+        '''
 
         index = self.hash(key)
 

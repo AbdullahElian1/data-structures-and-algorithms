@@ -16,3 +16,15 @@ class HashTable:
         return index
 
 
+    def add(self,key,value):
+
+        index = self.hash(key)
+
+        if not self._buckets[index]:
+         self._buckets[index] = LinkedList()
+
+
+        self._buckets[index].append([key,value])
+
+
+

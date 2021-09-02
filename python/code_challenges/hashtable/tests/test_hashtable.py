@@ -32,5 +32,13 @@ def test_find(test_hashtable):
     assert test.find("roaa")==5555
 
 
+def test_not_find(test_hashtable):
+    test=test_hashtable
+    assert test.find("test") == None
+
+
+
+
+
 
 

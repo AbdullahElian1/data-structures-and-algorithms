@@ -36,6 +36,12 @@ def test_not_find(test_hashtable):
     test=test_hashtable
     assert test.find("test") == None
 
+def test_contains(test_hashtable):
+    test=test_hashtable
+    assert test.contains("anas")
+    assert test.contains("roaa")
+
+
 
 
 

@@ -26,3 +26,11 @@ def test_hash():
   test=HashTable()
   assert  test.hash("abdullah")==683
 
+def test_find(test_hashtable):
+    test=test_hashtable
+    assert test.find("anas") == 4444
+    assert test.find("roaa")==5555
+
+
+
+

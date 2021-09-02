@@ -28,3 +28,23 @@ class HashTable:
 
 
 
+    def find(self,key):
+        """this function will search in the hashtable about the key and return the value
+        parameters:
+        key: a string
+        return: the value
+        """
+        index = self.hash(key)
+        if self._buckets[index]:
+            cuurrent=self._buckets[index].head
+            while cuurrent:
+                if cuurrent.value[0]==key:
+                    print(cuurrent.value[1])
+                    return cuurrent.value[1]
+                cuurrent=cuurrent.next
+        else:
+            return None
+
+
+
+

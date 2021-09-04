@@ -36,6 +36,12 @@ To run your tests
 |insertion_sort   |[insertion_sort](python/code_challenges/insert_sort/README.md) |
 |mergesort   |[merge_sort](python/code_challenges/mergesort3/README.md) |
 |quick_sort       |[quick_sort](python/code_challenges/quicksort/README.md) |
+|repeated_Word     |[repeated_word](python/code_challenges/hashtable/README.md
+) |
+
+
+
+
 
 
 

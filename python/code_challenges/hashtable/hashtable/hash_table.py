@@ -1,5 +1,7 @@
 from hashtable.linked_list import *
 
+
+
 class HashTable:
 
     def __init__(self, size = 1024):
@@ -7,6 +9,9 @@ class HashTable:
         self._buckets = [None] *self.size
 
 
+
+    def get_buckets(self):
+        return self._buckets
 
     def hash(self,key:str)->int:
         """
@@ -74,17 +79,51 @@ class HashTable:
         else:
             return False
 
+
+
     # return self._buckets[index].includes([key,value])
 
 
-test=HashTable(3)
 
-test.add("anas",4444)
-test.add("roaa",5555)
-test.add("anas",6666)
+def repeted_word(sentance):
+    arr=sentance.lower().split(" ")
+    hash=HashTable()
+    for  i in arr:
+        if hash.contains(i):
+            return (i, len(arr))
+        hash.add(i,i)
+    return "None"
 
-test.find("anas")
-test.find("roaa")
 
-print(test.hash("abdullah"))
-print(test.hash("abd"))
+
+
+
+
+
+
+
+
+
+# test=HashTable(3)
+# test1=HashTable(3)
+# test.add("anas","an")
+# test.add("fond","en")
+# test1.add("abdullah","ab")
+# test1.add("anas","sss")
+
+# hashmap_left_join(test,test1)
+
+
+
+# test.add("anas",4444)
+# test.add("roaa",5555)
+# test.add("anas",6666)
+
+# test.find("anas")
+# print(repeted_word("welcome  to jordan to")[1])
+# test.find("to")
+
+# print(test.hash("abdullah"))
+# print(test.hash("abd"))
+
+

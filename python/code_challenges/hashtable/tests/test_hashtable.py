@@ -62,6 +62,9 @@ def test_number_of_word_in_string():
     test=HashTable()
     assert test.repeted_word("welcome to jordan and welcome again")[1]== 6
 
+def test_no_repeted_Word():
+    test=HashTable()
+    assert test.repeted_word("welcome to jordan and  again")== "None"
 
 
 

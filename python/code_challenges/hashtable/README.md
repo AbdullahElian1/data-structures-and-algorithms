@@ -37,7 +37,7 @@ Create a function that take one argument as string then return the first repeate
 
 ## Whiteboard Process
 
-![Image of Yaktocat]("assest/1.jpg")
+![Image of Yaktocat](assest/1.jpg)
 
 
 

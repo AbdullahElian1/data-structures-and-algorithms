@@ -54,6 +54,20 @@ def test_collision2(test_hashtable):
     assert test.find("31")==5555
 
 
+def test_repeted_Word():
+    assert repeted_word("welcome to jordan and welcome again")[0]== "welcome"
+
+def test_number_of_word_in_string():
+    test=HashTable()
+    assert repeted_word("welcome to jordan and welcome again")[1]== 6
+
+def test_no_repeted_Word():
+    test=HashTable()
+    assert repeted_word("welcome to jordan and  again")== "None"
+
+
+
+
 
 
 

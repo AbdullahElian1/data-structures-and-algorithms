@@ -37,6 +37,9 @@ To run your tests
 |mergesort   |[merge_sort](python/code_challenges/mergesort3/README.md) |
 |quick_sort       |[quick_sort](python/code_challenges/quicksort/README.md) |
 |repeated_Word     |[repeated_word](python/code_challenges/hashtable/README.md) |
+|Tree_intersection      |[Tree_intersection](python/code_challenges/tree_intersection/README.md) |
+
+
 
 
 

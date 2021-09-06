@@ -22,10 +22,7 @@ for the big O, the space complexity is O(n), because we are using an array to st
 
 def hash_map_tree_intersection(tree1,tree2):
     arr=[]
-    # arr=tree1.in_order(tree1.root)
-    print(tree1.root)
     arr1=tree2.in_order(tree2.root)
-    # print(arr)
     hash=HashTable()
     print(tree1.root.value)
     def convert_tree_to_hash(root):
@@ -34,7 +31,6 @@ def hash_map_tree_intersection(tree1,tree2):
                 convert_tree_to_hash(root.left)
 
             hash.add(str(root.value),str(root.value))
-            print("x")
 
             if root.right:
                 convert_tree_to_hash(root.right)
@@ -46,6 +42,7 @@ def hash_map_tree_intersection(tree1,tree2):
         if hash.contains(str(i)):
             arr.append(i)
     return arr
+
 
 
 

@@ -6,7 +6,9 @@ function called left join
 Arguments: two hash maps
 
 Implement a simplified LEFT JOIN for 2 Hashmaps
-Whiteboard Process
+## Whiteboard Process
+
+![left_join](assest/left_join_whiteboard.jpg)
 
 
 

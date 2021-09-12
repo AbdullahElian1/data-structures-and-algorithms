@@ -41,7 +41,7 @@ class HashTable:
          self._buckets[index] = LinkedList()
 
 
-        self._buckets[index].append([key,value])
+        self._buckets[index].insert([key,value])
 
 
 

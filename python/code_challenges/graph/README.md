@@ -60,3 +60,8 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 4. get neighbors: return the edges and the weight to the input node.
 
 5. size: returns the total number of nodes in the graph.
+
+
+## WHiteboard:
+
+![Image of Yaktocat](assest/1.jpg)

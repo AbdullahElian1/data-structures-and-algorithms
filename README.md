@@ -36,9 +36,15 @@ To run your tests
 |insertion_sort   |[insertion_sort](python/code_challenges/insert_sort/README.md) |
 |mergesort   |[merge_sort](python/code_challenges/mergesort3/README.md) |
 |quick_sort       |[quick_sort](python/code_challenges/quicksort/README.md) |
+|repeated_Word     |[repeated_word](python/code_challenges/hashtable/README.md) |
 |Tree_intersection      |[Tree_intersection](python/code_challenges/tree_intersection/README.md) |
 |Left_join   |[Left_join](python/code_challenges/hash_left_join/README.md) |
+|graph_breadthfirst   |[graph_breadthfirst](python/code_challenges/graph/README.md) |
 |trip_graph   |[trip_graph](python/code_challenges/graph_trip1/README.md) |
+
+
+
+
 
 
 

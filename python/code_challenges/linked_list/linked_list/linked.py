@@ -178,14 +178,6 @@ def zip_linked_list(linked1, linked2):
 
 
 
-
-
-
-
-
-
-
-
         return linked1
 
 
@@ -237,10 +229,16 @@ new_linked1.append(1)
 new_linked1.append(2)
 new_linked1.append(3)
 new_linked1.append(4)
-new_linked1.append("a")
+new_linked1.append(5)
+new_linked1.append(5)
+
+
+# new_linked1.append("a")
 # new_linked1.append("t")
 
 print(reverse(new_linked1))
+print(reverse(new_linked1))
+
 
 # new_linked1.append(5)
 # new_linked1.append(6

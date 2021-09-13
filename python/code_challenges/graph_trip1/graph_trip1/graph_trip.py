@@ -37,11 +37,12 @@ def business_trip(graph,arr):
     """
     Determine whether the trip is possible with direct flights, and how much it would cost.
 
+
+
     Args:
         graph (Graph): contains all the list of the cities and its cost
         arr (list): List of the cities
     Return
-
         tuple : (cost, Bool).
 
             cost: Total cost for Trip.

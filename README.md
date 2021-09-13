@@ -40,6 +40,8 @@ To run your tests
 |Tree_intersection      |[Tree_intersection](python/code_challenges/tree_intersection/README.md) |
 |Left_join   |[Left_join](python/code_challenges/hash_left_join/README.md) |
 |graph_breadthfirst   |[graph_breadthfirst](python/code_challenges/graph/README.md) |
+|trip_graph   |[trip_graph](python/code_challenges/graph_trip1/README.md) |
+
 
 
 

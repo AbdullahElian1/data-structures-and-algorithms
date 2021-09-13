@@ -117,7 +117,7 @@ class Graph:
 
 
 
-  def _breadthFirst(self, action):
+  def _breadthFirst(self, action=lambda x : print(x)):
     """
     Performs a level order traversal of the graph and calls action at each node
     """
@@ -147,6 +147,7 @@ class Graph:
                 # print(edge.vertex)
                 visited.append(edge.vertex.value)
                 breadth.enqueue(edge.vertex)
+    return visited
 
 
 
@@ -193,15 +194,15 @@ if __name__ == '__main__':
     graph=Graph()
     graph.add_vertex(ver)
 
-    # graph.add_vertex(ver2)
-    # graph.add_vertex(ver3)
-    # graph.add_vertex(ver4)
+    graph.add_vertex(ver2)
+    graph.add_vertex(ver3)
+    graph.add_vertex(ver4)
 
     graph.add_edges(ver,ver)
-    # graph.add_edges(ver,ver3)
-    # graph.add_edges(ver,ver4)
+    graph.add_edges(ver,ver3)
+    graph.add_edges(ver,ver4)
 
-    print(len(graph.get_neighbors(ver)))
+    print(graph._breadthFirst())
 
     # print(graph.size()
 

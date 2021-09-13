@@ -1,47 +1,40 @@
-import sys
-
-sys.path.append("/home/abdullah/Asac/data-structures-and-algorithms/python/code_challenges/graph")
-
-from graph.graph import *
+# Graph Trip
+## Auther :  AbdullahELian
+## Contiputer Anas abu ghalia and roaa mostafa
 
 
-ver=Vertex('a')
-ver2=Vertex('b')
-# ver3=Vertex('d')
-# ver4=Vertex('p')
-
-graph=Graph()
-graph.add_vertex(ver)
-
-graph.add_vertex(ver2)
-# graph.add_vertex(ver3)
-# graph.add_vertex(ver4)
-
-graph.add_edges(ver,ver2)
-# graph.add_edges(ver,ver3)
-# graph.add_edges(ver,ver4)
-
-# print(len(graph.get_neighbors(ver)))
-
-# print(graph.size()
-
-# )
-# print(graph._adjacency_list[f'{ver}'])
+## Whiteboard
+![trip](assest/1.jpg)
 
 
+## Approach & Efficiency
 
-# graph._depthFirst(test)
-# print(graph)
+the approach used assures that there is no edge case that can happen at all
 
+    Define a counter and a boolean as True, the moment the boolean turns into false, this means that the trip can't be made.
+
+    get all the nodes, and get the nodes related to the array, then store them inside the new array
+
+    start a recursive function call, that takes two nodes at a time, determine if there is an edge between them, if exists, it adds the weight to the counter, if it doesn't exist, this will make bool false, and return false with $0 cost
+
+    return the total cost
+
+time complexity => O(n).
+
+space complexity => O(1).
+
+## Solution
+'''
 def business_trip(graph,arr):
     """
     Determine whether the trip is possible with direct flights, and how much it would cost.
+
+
 
     Args:
         graph (Graph): contains all the list of the cities and its cost
         arr (list): List of the cities
     Return
-
         tuple : (cost, Bool).
 
             cost: Total cost for Trip.
@@ -74,5 +67,4 @@ def business_trip(graph,arr):
      return (bool(cost),cost)
 
     return (bool(cost),cost)
-
-
+'''

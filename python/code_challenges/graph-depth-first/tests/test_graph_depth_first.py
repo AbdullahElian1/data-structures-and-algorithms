@@ -100,3 +100,6 @@ def test_empty_graph():
     assert graph.get_nodes()==None
 def test_breadth_first_Triversal(date):
      assert date._breadthFirst() == ['a', 'c', 'd', 'p']
+
+def test_depth_first_Triversal(date):
+     assert date._depthFirst() == ['a', 'c', 'd', 'p']

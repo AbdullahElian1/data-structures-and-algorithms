@@ -41,6 +41,8 @@ To run your tests
 |Left_join   |[Left_join](python/code_challenges/hash_left_join/README.md) |
 |graph_breadthfirst   |[graph_breadthfirst](python/code_challenges/graph/README.md) |
 |trip_graph   |[trip_graph](python/code_challenges/graph_trip1/README.md) |
+|depth_first  |[depth_first](python/code_challenges/graph-depth-first/README.md) |
+
 
 
 

@@ -2,13 +2,15 @@
 Challenge
     to return the Deepth path in graph
 
+## Whiteboard process
+![depth_first](assest/1.jpg)
 
-# Efficiency for breadth first
+## Efficiency for breadth first
 
     Time: O(n)
     Space: O(n)
 
-# Solution
+## Solution
 '''
 def _depthFirst(self, action=lambda x: print(x)):
     """
